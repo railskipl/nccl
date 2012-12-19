@@ -1,0 +1,31 @@
+/*======= index.html =======*/
+#page1 #content .row-1 .col-1 {width:auto; margin-right:0;}
+#page1 #content .row-1 .col-2 {width:279px;}
+#page1 #content .row-2 .col-1 {width:185px; margin-right:23px;}
+#page1 #content .row-2 .col-2 {width:184px; margin-right:23px;}
+#page1 #content .row-2 .col-3 {width:183px;}
+
+/*======= index-1.html =======*/
+#page2 #content .row-1 .col-1 {width:185px; margin-right:23px;}
+#page2 #content .row-1 .col-2 {width:184px; margin-right:23px;}
+#page2 #content .row-1 .col-3 {width:183px;}
+#page2 #content .row-2 .col-1 {width:279px; margin-right:40px;}
+#page2 #content .row-2 .col-2 {width:279px;}
+
+/*======= index-2.html =======*/
+#page3 #content .col-1 {width:185px; margin-right:23px;}
+#page3 #content .col-2 {width:184px; margin-right:23px;}
+#page3 #content .col-3 {width:183px;}
+
+/*======= index-3.html =======*/
+#page4 #content .row-1 .col-1 {width:185px; margin-right:23px;}
+#page4 #content .row-1 .col-2 {width:184px; margin-right:23px;}
+#page4 #content .row-1 .col-3 {width:183px;}
+#page4 #content .row-2 .col-1 {width:279px; margin-right:40px;}
+#page4 #content .row-2 .col-2 {width:279px;}
+
+
+
+/*=========================*/
+
+

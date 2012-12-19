@@ -1,17 +1,92 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Nccl</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+<TITLE>NAGPUR CHAMBER OF COMMERCE LIMITED</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+
+<%= stylesheet_link_tag "layout", "style", "tabstyle", "tabs", "navigation", "skitter.styles", :media => "all" %>
+<%= javascript_include_tag "application" %>
+
+<script>
+	jQuery(document).ready(function() {
+		jQuery(".box_skitter_large").skitter({
+			animation: "fade", 
+ 			dots: true
+		});
+	});
+</script>
+
+
+
+
+
+
+
+        <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
-<body>
 
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+<body id="page1">
+<div class="tail-top">
+  <div id="main">
+    <!-- header -->
+    <div id="header">
+	
+	<nav id="colorNav">
+			<ul>
+				<li class="green">
+					<%= link_to "Home", main_index_path %>			
+				</li>
+				<li class="red">
+					<a href="/pages/about-us">About Us</a>
+					<ul>
+						<li><a href="#">By Laws</a></li>
+					</ul>
+				</li>
+				<li class="blue">
+					<a href="#">Committee</a>
+					<ul>
+						<li><a href="#">Office Bearers</a></li>
+						<li><a href="#">Special Invitee</a></li>
+						<li><a href="#">Co-Option</a></li>
+						<li><a href="#">Past Presidents &amp; Secretaries </a></li>
+					</ul>
+				</li>
+				<li class="yellow">
+					<a href="#">Events</a>				</li>
+				<li class="purple">
+					<a href="#">Press release</a>				</li>
+					
+					<li class="contact">
+					<a href="#">Contact Us</a>				</li>
+			</ul>
+		</nav>
+      <div class="logo"> <a href="#"><img src="/assets/logo.png" alt="" width="330" height="85" /></a> </div>
+      <!-- .nav -->
+	
+      <!-- /.nav -->
+    </div>
 
-<%= yield %>
+      <%= yield %>
+      
+      
+      <!-- footer -->
+          <div id="footer">
+            <div class="wrapper">
+              <div class="fleft">NAGPUR CHAMBER OF COMMERCE LIMITED © 2012&nbsp;&nbsp;|&nbsp;&nbsp<%= link_to "Home", main_index_path %>&nbsp;&nbsp; | &nbsp; <a href="/pages/privacy-policy">Privacy Policy</a>
 
-</body>
-</html>
+              </div>
+
+      		<div class="fright"><strong>Powered by</strong> <a href="#">Kunal Infotech Pvt Ltd.  </a></div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      </body>
+      </html>

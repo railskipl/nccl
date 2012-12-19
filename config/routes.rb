@@ -5,6 +5,7 @@ Nccl::Application.routes.draw do
   match '/contacts' => "main#contact"
   
   resources :main, :only => [:index], :path => 'home-page'
+  resources :pages, :only => [:show]
 
   root :to => "home#index"
   
