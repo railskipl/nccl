@@ -3,9 +3,13 @@ Nccl::Application.routes.draw do
   devise_for :admins, :path_names => {:sign_in =>"login", :sign_out =>"logout"}
   
   match '/contacts' => "main#contact"
+ 
   
   resources :main, :only => [:index], :path => 'home-page'
   resources :pages, :only => [:show]
+  
+  resources :events, :only => [:index]
+
 
   root :to => "home#index"
   
