@@ -5,7 +5,7 @@ class Admin::ContactsController < ApplicationController
   before_filter :authenticate_admin!, :except => []
   
   def index
-    @contacts = Contact.find(:all, :order => 'id desc')
+    @contacts = Contact.order('id desc').paginate(:per_page => 1, :page => params[:page])
     
     respond_to do |format|
         format.html
