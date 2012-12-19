@@ -1,5 +1,7 @@
 Nccl::Application.routes.draw do
   
+
+
   devise_for :admins, :path_names => {:sign_in =>"login", :sign_out =>"logout"}
   
   match '/contacts' => "main#contact"
@@ -11,6 +13,7 @@ Nccl::Application.routes.draw do
   
   resources :events, :only => [:index]
 
+  resources :presses, :only => [:index]
 
   resources :committee, :only => [:show]
 
