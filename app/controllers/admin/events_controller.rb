@@ -5,7 +5,7 @@ class Admin::EventsController < ApplicationController
   before_filter :authenticate_admin!, :except => []
   
     def index
-      @events = Event.find(:all, :order => 'id desc')
+      @events = Event.order('id desc').paginate(:per_page => 1, :page => params[:page])
       
       respond_to do |format|
           format.html

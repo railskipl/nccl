@@ -5,7 +5,7 @@ class Admin::CommitteeTypesController < ApplicationController
   before_filter :authenticate_admin!, :except => []
   
   def index
-    @committee_types = CommitteeType.find(:all, :order => 'id asc')
+    @committee_types = CommitteeType.order('id desc').paginate(:per_page => 1, :page => params[:page])
     
     respond_to do |format|
         format.html

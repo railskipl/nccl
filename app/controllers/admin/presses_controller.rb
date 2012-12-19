@@ -4,7 +4,8 @@ class Admin::PressesController < ApplicationController
   before_filter :authenticate_admin!, :except => []
   
     def index
-      @presses = Press.find(:all, :order => 'id desc')
+      @presses = Press.order("title").page(params[:page]).per_page(5)
+                                 
       
       respond_to do |format|
           format.html
