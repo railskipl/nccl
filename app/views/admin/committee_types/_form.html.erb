@@ -1,0 +1,26 @@
+
+
+
+
+<%= form_for [:admin, @committee_type],:html => { :multipart => true } do |f| %>
+
+  
+  <%- @committee_type.errors.full_messages.each do |message| -%>
+   <div class="errorExplanation"> <p><%= message %></p></div>
+  <%- end -%>
+   
+  
+  <div id="breadcrumb">
+  	   <%= link_to "Committee Type", admin_committee_types_path %> &raquo; New
+  </div>
+ 
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, :class => 'text' %>
+  </p>
+  
+  <%= render :partial =>"shared/button" %>
+
+<% end %>
+
+

@@ -1,0 +1,30 @@
+ <div id="contact-form">
+<%= form_for :contact, :html=>{:id=>'contactform'} do |form| %>
+
+ 
+	<fieldset>
+		<p class="hide" id="response"></p>				
+		<div class="field-group">
+			<label class="required" for="form_name">Name<span>*</span></label>
+			<%= form.text_field :name, :size => 40, :class => "field" %>
+			
+		</div> 
+		<div class="field-group">
+			<label class="required" for="form_name">Subject<span>*</span></label>
+			<%= form.text_field :subject, :size => 40, :class => "field" %>
+			
+		</div>
+		<div class="field-group">
+			<label class="required" for="form_email">Email<span>*</span></label>
+			<%= form.text_field :email, :size => 40, :class => "field" %>
+			
+		</div>
+		<div class="clear"></div>
+		<label class="required" for="form_message">Message<span>*</span></label>
+		<%= form.text_area :message, :rows => 4, :cols => 34, :class => 'text' %>						
+		<%= submit_tag 'Submit', :class => "small-primary-btn input-btn" %>
+		
+      				
+	</fieldset>
+<% end %>
+ </div>

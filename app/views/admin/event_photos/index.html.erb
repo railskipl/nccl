@@ -1,0 +1,29 @@
+ 
+
+ <div id="content">
+ 	<p class='buttons'>
+ 		
+ 		<%= link_to  "Add Photo", new_admin_event_event_photo_path(@event_id), :class => 'button positive' %>
+ 		</p>
+		<p class='clear'></p>
+		   
+
+			<table class="admintable">
+			  <tr class="admintablehd">
+			    <td>Title</td>
+			    <td width="32%" style="text-align: center !important;">Action</td>
+			  </tr>
+			
+			<% @events_photos.each do |events_photo| %>
+			  <tr>
+			    <td><%= image_tag events_photo.photo.url(:thumb) %></td>
+			    <td style="text-align: center !important;">
+			     <%= link_to "Delete", admin_event_event_photo_path(@event_id, events_photo.event_id), :method=> :delete, :confirm => "Are you sure?", :class=>'button negative' %>
+				</td>
+			    
+			  </tr>
+			<% end %>
+			</table>
+			
+			<br />
+</div>

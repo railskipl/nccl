@@ -1,0 +1,50 @@
+
+
+ 
+
+	<%= form_for [:admin, @page],:html => { :multipart => true } do |f| %>
+	
+	  
+	  <%- @page.errors.full_messages.each do |message| -%>
+	   <div class="errorExplanation"> <p><%= message %></p></div>
+	  <%- end -%>
+	   
+	  
+	  <div id="breadcrumb">
+	  	   <%= link_to "Pages", admin_pages_path %> &raquo; New
+	  </div>
+	 
+	  <p>
+	    <%= f.label :title %>
+	    <%= f.text_field :title, :class => 'text' %>
+	  </p>
+	
+	  
+	  <p>
+	    <%= f.label :desc %>
+	    <%= f.text_area :desc %>
+	  </p>
+	  <fieldset>
+        <legend>For SEO  : </legend>
+        
+    <p>
+    	  <%= f.label :meta_title %>
+    	  <%= f.text_field :meta_title, :class => 'text' %>
+    </p>
+	  <p>
+	    <%= f.label :meta_key %>
+	    <%= f.text_field :meta_key, :class => 'text' %>
+	  </p>
+	
+	  <p>
+		<%= f.label :meta_desc %>
+	    <%= f.text_field :meta_desc, :class => 'tiny_mce' %>
+		
+	  </p>
+	  </fieldset>
+	  
+	  <%= render :partial =>"shared/button" %>
+	
+	<% end %>
+
+

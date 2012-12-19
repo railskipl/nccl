@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  : 
+  desc: MyText
+  meta_title: MyString
+  meta_key: MyString
+  meta_desc: MyString
+
+two:
+  : 
+  desc: MyText
+  meta_title: MyString
+  meta_key: MyString
+  meta_desc: MyString

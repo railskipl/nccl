@@ -1,0 +1,32 @@
+ 
+
+ <div id="content">
+ 	<p class='buttons'>
+ 		
+ 		<%= link_to  "Add Committee", new_admin_committee_type_path, :class => 'button positive' %>
+ 		</p>
+		<p class='clear'></p>
+		   
+
+			<table class="admintable">
+			  <tr class="admintablehd">
+			    <td width="25%">Full Name</td>
+			    
+			    <td width="31%" style="text-align: center !important;">Action</td>
+			  </tr>
+			
+			<% @committee_types.each do |committee_type| %>
+			  <tr>
+			    <td><%= committee_type.title %></td>
+			   
+			    <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_committee_type_path(committee_type), :class=>'button positive' %> &nbsp;&nbsp; 
+				  <%= link_to "Show",  admin_committee_type_path(committee_type), :class=>'button positive' %> &nbsp;&nbsp;
+				  
+				</td>
+			    
+			  </tr>
+			<% end %>
+			</table>
+			
+			<br />
+</div>
