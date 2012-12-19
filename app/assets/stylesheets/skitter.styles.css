@@ -41,7 +41,7 @@
 
 /* =Loading
 -------------------------------------------------------------- */
-.loading {position:absolute; top:50%; right:50%; z-index:10000; margin:-16px -16px;color:#fff;text-indent:-9999em;overflow:hidden;background:url(../images/ajax-loader.gif) no-repeat left top;width:32px;height:32px;}
+.loading {position:absolute; top:50%; right:50%; z-index:10000; margin:-16px -16px;color:#fff;text-indent:-9999em;overflow:hidden;background:url(/assets/ajax-loader.gif) no-repeat left top;width:32px;height:32px;}
 
 /* =Label
 -------------------------------------------------------------- */
@@ -64,7 +64,7 @@
 
 .box_skitter .focus_button {position:absolute;top:50%;z-index:100;width:42px;height:42px;overflow:hidden;text-indent:-9999em;margin-top:-25px;background:url(/assets/focus-button.png) no-repeat left top;opacity:0;}
 .box_skitter .play_pause_button {position:absolute;top:50%;z-index:151;width:42px;height:42px;overflow:hidden;text-indent:-9999em;margin-top:-25px;background:url(/assets/pause-button.png) no-repeat left top;opacity:0;}
-.box_skitter .play_pause_button.play_button {background:url(../images/play-button.png) no-repeat left top;}
+.box_skitter .play_pause_button.play_button {background:url(/assets/play-button.png) no-repeat left top;}
 
 /* =Example for dimenions
 -------------------------------------------------------------- */
