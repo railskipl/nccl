@@ -3,7 +3,6 @@
 #londontabs{
 	float:left;
 	width:299px;
-	background:url(images/tabs_bg.png);
 }
 
 div#londontabs.widget{
@@ -23,7 +22,7 @@ div#londontabs.widget{
    
 }
 .tabsheader{
-	background-image:url(images/tabs_header.png) !important; 
+	
 	border:1px solid #e7e7e7;
 	float:left; 
 	width:auto;
