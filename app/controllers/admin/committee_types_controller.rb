@@ -22,7 +22,7 @@ class Admin::CommitteeTypesController < ApplicationController
     @committee_type = CommitteeType.new(params[:committee_type])
     if @committee_type.save
       flash[:notice] = "Committee member added successfully"
-      redirect_to admin_committees_path
+      redirect_to admin_committee_types_path
     else
       render :new
     end
