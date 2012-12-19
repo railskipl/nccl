@@ -21,6 +21,8 @@
 				<li><% if controller.controller_name == 'committee_types' %> <%= link_to "Committee", admin_committee_types_path, :class=>"active" %> <% else %> <%= link_to "Committee", admin_committee_types_path %> <% end %></li>
 				<li><% if controller.controller_name == 'events' %> <%= link_to "Event", admin_events_path, :class=>"active" %> <% else %> <%= link_to "Event", admin_events_path %> <% end %></li>
 				<li><% if controller.controller_name == 'contacts' %> <%= link_to "Contact", admin_contacts_path, :class=>"active" %> <% else %> <%= link_to "Contact", admin_contacts_path %> <% end %></li>
+				<li><% if controller.controller_name == 'press' %> <%= link_to "Press", admin_presses_path, :class=>"active" %> <% else %> <%= link_to "Press", admin_presses_path %> <% end %></li>
+				
 				<li>
 					<% if admin_signed_in? %> 
 						<%= link_to "Sign out", destroy_admin_session_path, :method => :delete %> 

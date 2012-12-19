@@ -20,6 +20,8 @@ Nccl::Application.routes.draw do
        resources :committees
      end
      
+     resources :presses
+     
      resources :contacts
    end
   

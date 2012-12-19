@@ -6,7 +6,7 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'therubyracer'
 gem "devise"
 
 gem "friendly_id", "~> 3.3.0.alpha2"
