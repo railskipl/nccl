@@ -166,13 +166,11 @@ li.tagslast a.tagslast{
 
 .tab_inside div.content{
 	float:left;
-	width:189px;
 	padding-left:12px;
 }
 
 .tab_inside div.content a{
 	color:#343434;
-	font-weight:normal;
 	text-shadow:none;
 	line-height:1.6em;
 }
@@ -186,7 +184,10 @@ li.tagslast a.tagslast{
 	float:left;
 	font-size:13px;
 	width:100%;
+	margin-bottom: 2px;
 }
+
+.tab_inside div.content p{ margin-bottom: 1px;}
 
 .tab_inside span.date{
 	color:#a2a2a2;

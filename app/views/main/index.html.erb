@@ -1,3 +1,4 @@
+ 
       <!-- content -->
       <div id="content">
 
@@ -61,98 +62,59 @@
   </div>
 
   <div id="markettab" class="tabdiv ui-tabs-panel" style="">
-  <div class="tab_inside">
-  <a href="#"><img src="images/thumb_038.png" alt="How to make good business charts"></a>
-  <div class="content">
-  <h1><a href="#">How to make good business charts</a></h1> 
-  <span class="date">January 03,  2011</span>
-  </div>
-  </div>
+  
+    <% @markets.each do |market| %> 
+    <div class="tab_inside">
+      <div class="content">
+        <h1><a href="<%= market.link %>"><%=  truncate(market.title) %></a></h1> 
+        <p style="font-size:11px;"><%= truncate(market.description, :length => 140).html_safe %></p>
+        <span class="date"><%= market.pubDate %></span>
+      </div>
+    </div>
+    <% end %>
 
-
-  <div class="tab_inside">
-  <a href="#"><img src="images/thumb_038.png" alt="How to make good business charts"></a>
-  <div class="content">
-  <h1><a href="#">How to make good business charts</a></h1> 
-  <span class="date">January 03,  2011</span>
-  </div>
-  </div>
-
-
-  <div class="tab_inside">
-  <a href="#"><img src="images/thumb_038.png" alt="How to make good business charts"></a>
-  <div class="content">
-  <h1><a href="#">How to make good business charts</a></h1> 
-  <span class="date">January 03,  2011</span>
-  </div>
-  </div>
-
-  <div class="tab_inside no_border_bottom">
-  <a href="#"><img src="images/thumb_013.png" alt="How to setup business meetings"></a>
-  <div class="content">
-  <h1><a href="#">How to setup business meetings</a></h1> 
-  <span class="date">February 03,  2011</span>
-  </div>
-  </div>
   </div>
 
 
 
   <div style="" id="recenttab" class="tabdiv ui-tabs-panel ui-tabs-hide">
-  <div class="tab_inside">
-  <a href="#"><img src="images/thumb_038.png" alt="How to make good business charts"></a>
-  <div class="content">
-  <h1><a href="#">How to make good business charts</a></h1> 
-  <span class="date">January 03,  2011</span>
-  </div>
-  </div>
-
-  <div class="tab_inside no_border_bottom">
-  <a href="#"><img src="images/thumb_013.png" alt="How to setup business meetings"></a>
-  <div class="content">
-  <h1><a href="#">How to setup business meetings</a></h1> 
-  <span class="date">February 03,  2011</span>
-  </div>
-  </div>
+  
+    <% @bankings.each do |banking| %> 
+    <div class="tab_inside">
+      <div class="content">
+        <h1><a href="<%= banking.link %>"><%=  truncate(banking.title) %></a></h1> 
+        <p style="font-size:11px;"><%= truncate(banking.description, :length => 140).html_safe %></p>
+        <span class="date"><%= banking.pubDate %></span>
+      </div>
+    </div>
+    <% end %>
 
   </div>
 
   <div style="" id="commentstab" class="tabdiv ui-tabs-panel ui-tabs-hide">
+   <% @economies.each do |economy| %> 
+    <div class="tab_inside">
+      <div class="content">
+        <h1><a href="<%= economy.link %>"><%=  truncate(economy.title) %></a></h1> 
+        <p style="font-size:11px;"><%= truncate(economy.description, :length => 140).html_safe %></p>
+        <span class="date"><%= economy.pubDate %></span>
+      </div>
+    </div>
+    <% end %>
 
-  <div class="tab_inside">
-  <a href="#"><img src="images/thumb_038.png" alt="How to make good business charts"></a>
-  <div class="content">
-  <h1><a href="#">How to make good business charts</a></h1> 
-  <span class="date">January 03,  2011</span>
-  </div>
-  </div>
-
-  <div class="tab_inside no_border_bottom">
-  <a href="#"><img src="images/thumb_013.png" alt="How to setup business meetings"></a>
-  <div class="content">
-  <h1><a href="#">How to setup business meetings</a></h1> 
-  <span class="date">February 03,  2011</span>
-  </div>
-  </div>
   </div>
 
   <div style="" id="tagtab" class="tabdiv ui-tabs-panel ui-tabs-hide">
 
-  <div class="tab_inside">
-  <a href="#"><img src="images/thumb_038.png" alt="How to make good business charts"></a>
-  <div class="content">
-  <h1><a href="#">How to make good business charts</a></h1> 
-  <span class="date">January 03,  2011</span>
-  </div>
-  </div>
-
-  <div class="tab_inside no_border_bottom">
-  <a href="#"><img src="images/thumb_013.png" alt="How to setup business meetings"></a>
-  <div class="content">
-  <h1><a href="#">How to setup business meetings</a></h1> 
-  <span class="date">February 03,  2011</span>
-  </div>
-  </div>
+    <% @companies.each do |company| %> 
+    <div class="tab_inside">
+      <div class="content">
+        <h1><a href="<%= company.link %>"><%=  truncate(company.title) %></a></h1> 
+        <p style="font-size:11px;"><%= truncate(company.description, :length => 140).html_safe %></p>
+        <span class="date"><%= company.pubDate %></span>
+        </div>
+    </div>
+    <% end %>
 
   </div>
 
