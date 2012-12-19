@@ -7,8 +7,12 @@ Nccl::Application.routes.draw do
   
   resources :main, :only => [:index], :path => 'home-page'
   resources :pages, :only => [:show]
+
   
   resources :events, :only => [:index]
+
+
+  resources :committee, :only => [:show]
 
 
   root :to => "home#index"

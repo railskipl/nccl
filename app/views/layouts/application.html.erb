@@ -6,6 +6,7 @@
 <meta http-equiv="Content-Style-Type" content="text/css" />
 
 <%= stylesheet_link_tag "layout", "style", "tabstyle", "tabs", "navigation", "skitter.styles", :media => "all" %>
+<%= yield :styles %>
 <%= javascript_include_tag "application" %>
 <%= yield :scripts %>
 <script>
@@ -40,14 +41,14 @@
 				<li class="blue">
 					<a href="#">Committee</a>
 					<ul>
-						<li><a href="#">Office Bearers</a></li>
-						<li><a href="#">Special Invitee</a></li>
-						<li><a href="#">Co-Option</a></li>
-						<li><a href="#">Past Presidents &amp; Secretaries </a></li>
+					  <% commitees = CommitteeType.order('id asc') %>
+					  <% commitees.each do |commitee| %>
+						<li><%= link_to commitee.title, committee_path(commitee) %></li>
+					  <% end %>
 					</ul>
 				</li>
 				<li class="yellow">
-					<a href="#">Events</a>				</li>
+					<%= link_to "events" ,events_path%>				</li>
 				<li class="purple">
 					<a href="#">Press release</a>				</li>
 					
