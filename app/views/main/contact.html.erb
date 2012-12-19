@@ -1,30 +1,75 @@
- <div id="contact-form">
+  	<% content_for :scripts do %>
+	<%= javascript_include_tag "jquery.validate.min.js","validation" %>
+    <% end %>
+    <!-- content -->
+    <div id="content">
+
+      <div class="indent">
+        <div class="wrapper" style="margin-bottom:20px">
+		  <h2>CONTACT US</h2>
+          <div>
+		  
+
+              <div class="wrapper">
+           
+              
+                 
+              <div style="width:40%; height:auto; float:left">
+                <ul>
+                  <li><strong>Pellentesque laoreet congue urna</strong>, </li>
+                  <li></li>
+                  <li>rutrum egestas ligula feugiat sit amet.</li>
+                  <li>Duis vel dolor sit amet nunc pellentesque eleifend.</li>
+                </ul>
+                <p>&nbsp;</p>
+                <p><strong>Ph. No:</strong> 0712-222222</p>
+                <p><strong>Mobile:</strong> 9812345678</p>
+                <p><strong>Email:</strong> info@abc.com  </p>
+              </div>
+			  <div style="width:60%; height:auto; float:left">	
+			  	
 <%= form_for :contact, :html=>{:id=>'contactform'} do |form| %>
+<table width="100%" border="0" cellspacing="10" cellpadding="10">
+  <tr>
+    <td align="right" valign="middle">Enter your Name:  </td>
+    <td align="left" valign="top"><label>
+      <%= form.text_field :name, :size => 40, :class => "tf"  %>
+    </label></td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle">E-mail address: </td>
+    <td align="left" valign="top"><%= form.text_field :email, :size => 40, :class => "tf" %>
+</td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle">Subject: </td>
+    <td align="left" valign="top"><%= form.text_field :subject, :size => 40, :class => "tf" %></td>
+    </tr>
+  <tr>
+    <td align="right" valign="middle">Enter your Message: </td>
+    <td align="left" valign="top"><%= form.text_area :message, :rows => 4, :cols => 34, :class => 'tf' %>
+    </tr>
+  <tr>
+    <td align="left" valign="top">&nbsp;</td>
+    <td align="left" valign="top"><label>
+    	<%= submit_tag 'Submit', :class => "button" ,:style => "float:left"%>
+		
+    </label></td>
+    </tr>
+</table>
+<% end %>
+        </div>        
+               
+               
+              </div>
+           
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+     
+ 
 
  
-	<fieldset>
-		<p class="hide" id="response"></p>				
-		<div class="field-group">
-			<label class="required" for="form_name">Name<span>*</span></label>
-			<%= form.text_field :name, :size => 40, :class => "field" %>
-			
-		</div> 
-		<div class="field-group">
-			<label class="required" for="form_name">Subject<span>*</span></label>
-			<%= form.text_field :subject, :size => 40, :class => "field" %>
-			
-		</div>
-		<div class="field-group">
-			<label class="required" for="form_email">Email<span>*</span></label>
-			<%= form.text_field :email, :size => 40, :class => "field" %>
-			
-		</div>
-		<div class="clear"></div>
-		<label class="required" for="form_message">Message<span>*</span></label>
-		<%= form.text_area :message, :rows => 4, :cols => 34, :class => 'text' %>						
-		<%= submit_tag 'Submit', :class => "small-primary-btn input-btn" %>
-		
-      				
-	</fieldset>
-<% end %>
- </div>

@@ -7,7 +7,7 @@
 
 <%= stylesheet_link_tag "layout", "style", "tabstyle", "tabs", "navigation", "skitter.styles", :media => "all" %>
 <%= javascript_include_tag "application" %>
-
+<%= yield :scripts %>
 <script>
 	jQuery(document).ready(function() {
 		jQuery(".box_skitter_large").skitter({
@@ -60,7 +60,7 @@
 					<a href="#">Press release</a>				</li>
 					
 					<li class="contact">
-					<a href="#">Contact Us</a>				</li>
+					<%= link_to "contacts" ,contacts_path%>				</li>
 			</ul>
 		</nav>
       <div class="logo"> <a href="#"><img src="/assets/logo.png" alt="" width="330" height="85" /></a> </div>
