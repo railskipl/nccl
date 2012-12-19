@@ -3,7 +3,7 @@
  <div id="content">
  	<p class='buttons'>
  		
- 		<%= link_to  "Add Member", new_admin_committee_path, :class => 'button positive' %>
+ 		<%= link_to  "Add Member", new_admin_committee_type_committee_path(@committee_type_id), :class => 'button positive' %>
  		</p>
 		<p class='clear'></p>
 		   
@@ -19,9 +19,10 @@
 			  <tr>
 			    <td><%= committee.name %></td>
 			    <td><%= committee.designation %> </td>
-			    <td style="text-align: center !important;"> <%= link_to "Edit", edit_admin_committee_path(committee), :class=>'button positive' %> &nbsp;&nbsp; 
-				  <%= link_to "Show",  admin_committee_path(committee), :class=>'button positive' %> &nbsp;&nbsp;
-				  <%= link_to "Delete", admin_committee_path(committee), :method=> :delete , :confirm => "Are you sure?",  :class=>'button negative' %>
+			    <td style="text-align: center !important;"> 
+			    <%= link_to "Edit", edit_admin_committee_type_committee_path(@committee_type_id, committee), :class=>'button positive' %> &nbsp;&nbsp; 
+				  <%= link_to "Show",  admin_committee_type_committee_path(@committee_type_id, committee), :class=>'button positive' %> &nbsp;&nbsp;
+				  <%= link_to "Delete", admin_committee_type_committee_path(@committee_type_id, committee), :method=> :delete , :confirm => "Are you sure?",  :class=>'button negative' %>
 				</td>
 			    
 			  </tr>

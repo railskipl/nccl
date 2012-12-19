@@ -2,7 +2,7 @@
 
 
 
-<%= form_for [:admin, @committee],:html => { :multipart => true } do |f| %>
+<%= form_for [:admin, :committee_type, @committee],:html => { :multipart => true } do |f| %>
 
   
   <%- @committee.errors.full_messages.each do |message| -%>
@@ -11,7 +11,7 @@
    
   
   <div id="breadcrumb">
-  	   <%= link_to "Pages", admin_pages_path %> &raquo; New
+  	   <%= link_to "Member list", admin_committee_type_committees_path(@committee_type_id) %> &raquo; New
   </div>
  
   <p>
@@ -37,6 +37,7 @@
   <p>
     <%= f.label :description %>
     <%= f.text_area :description %>
+    <%= f.hidden_field :committee_type_id, :value=> "#{@committee_type_id.id}" %>
   </p>
   
   
