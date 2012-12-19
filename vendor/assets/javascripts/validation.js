@@ -23,14 +23,14 @@ jQuery(document).ready(function() {
 		    		 required:  "Please enter the  name"
                      },
  		"contact[email]]":{
-		   				 required: "Please enter username"
+		   				 required: "Please enter email"
 					     },
 		"contact[subject]":{
-		                       required:  "Please enter the contact number"
+		                       required:  "Please enter subject"
 							   },
 		 "contact[message]":{
-						required: "Please enter email address",
-						remote:"email id already exists"
+						required: "Please enter message",
+						
 					   }
 		}
 	});
