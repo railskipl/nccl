@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
 		"contact[name]":{
 		    		 required:  "Please enter the  name"
                      },
- 		"contact[email]]":{
+ 		"contact[email]":{
 		   				 required: "Please enter email"
 					     },
 		"contact[subject]":{
