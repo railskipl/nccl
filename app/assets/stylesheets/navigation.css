@@ -34,7 +34,7 @@ section, footer, nav{
 	line-height: 1;
 	margin: 1px;
 	border-radius: 3px;
-	position:relative; z-index:10000; float:left
+	position:relative; z-index:100; float:left
 }
 
 #colorNav > ul > li > a{

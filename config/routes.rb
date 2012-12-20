@@ -13,7 +13,7 @@ Nccl::Application.routes.draw do
   
   resources :events, :only => [:index]
 
-  resources :presses, :only => [:index]
+  resources :presses, :only => [:index], :path => 'press-release'
 
   resources :committee, :only => [:show]
 
