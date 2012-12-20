@@ -3,8 +3,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id]) 
     
     @title = "#{@page.title}"
-    @meta_title = "NAGPUR CHAMBER OF COMMERCE LIMITED - #{@page.meta_title}"
-    @meta_keywords = "#{@page.meta_key}"
-    @meta_description = "#{@page.meta_desc}"
+    @meta_title = "Nagpur Chamber Of Commerce Limited - #{@title}"
+    
   end
 end

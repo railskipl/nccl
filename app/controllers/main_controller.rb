@@ -67,6 +67,7 @@ class MainController < ApplicationController
     	   else
     	     @title = "contacts"
   	     end
+  	     @meta_title = "Nagpur Chamber Of Commerce Limited - Contact Us"
   end
   
   def pps
