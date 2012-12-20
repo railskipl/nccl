@@ -17,7 +17,7 @@
                     
                     <% press_release = Press.find(:all, :limit=>2, :order=>"id desc") %>
                      <% press_release.each do |press| %> 
-                      <dt><strong><%= event.created_at.strftime("%a %d %b, %Y") %></strong> <%= press.title %></dt>
+                      <dt><strong><%= press.created_at.strftime("%a %d %b, %Y") %></strong> <%= press.title %></dt>
                     <% end %>
 
                   </dl>
