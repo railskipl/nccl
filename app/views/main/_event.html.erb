@@ -1,0 +1,34 @@
+<div class="section">
+  <div class="heading">News and Events</div>
+  <!-- .box -->
+  <div class="box">
+    <div class="border-right">
+      <div class="border-bot">
+        <div class="left-top-corner">
+          <div class="right-top-corner">
+            <div class="right-bot-corner">
+              <div class="left-bot-corner">
+                <div class="inner">
+                  <dl class="list3">
+                    <% events = Event.find(:all, :limit=>2, :order=>"id desc") %>
+                    <% events.each do |event| %> 
+                    <dt><strong><%= event.created_at.strftime("%a %d %b, %Y") %></strong> <%= event.name %></dt>
+                    <% end %>
+                    
+                    <% press_release = Press.find(:all, :limit=>2, :order=>"id desc") %>
+                     <% press_release.each do |press| %> 
+                      <dt><strong><%= event.created_at.strftime("%a %d %b, %Y") %></strong> <%= press.title %></dt>
+                    <% end %>
+
+                  </dl>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.box -->
+</div>

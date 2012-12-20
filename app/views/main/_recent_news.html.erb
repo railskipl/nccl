@@ -1,0 +1,72 @@
+<div id="londontabs" class="widget">
+
+<div id="tabsheader" class="tabsheader">
+
+<ul class="tabnav ui-tabs-nav">
+<li class="ui-tabs-selected"><a href="#markettab">Markets</a></li>
+<li class=""><a href="#recenttab">Banking</a></li>
+<li class=""><a href="#commentstab">Economy</a></li>
+<li class="tagslast"><a href="#tagtab" class="tagslast">Companies</a></li>
+</ul>
+
+</div>
+
+<div id="markettab" class="tabdiv ui-tabs-panel" style="">
+
+<% @markets.each do |market| %> 
+<div class="tab_inside">
+<div class="content">
+  <h1><a href="<%= market.link %>" target="_blank"><%=  truncate(market.title) %></a></h1> 
+  <p style="font-size:11px;"><%= truncate(market.description, :length => 140).html_safe %></p>
+  <span class="date"><%= market.pubDate %></span>
+</div>
+</div>
+<% end %>
+
+</div>
+
+
+
+<div style="" id="recenttab" class="tabdiv ui-tabs-panel ui-tabs-hide">
+
+<% @bankings.each do |banking| %> 
+<div class="tab_inside">
+<div class="content">
+  <h1><a href="<%= banking.link %>" target="_blank"><%=  truncate(banking.title) %></a></h1> 
+  <p style="font-size:11px;"><%= truncate(banking.description, :length => 140).html_safe %></p>
+  <span class="date"><%= banking.pubDate %></span>
+</div>
+</div>
+<% end %>
+
+</div>
+
+<div style="" id="commentstab" class="tabdiv ui-tabs-panel ui-tabs-hide">
+<% @economies.each do |economy| %> 
+<div class="tab_inside">
+<div class="content">
+  <h1><a href="<%= economy.link %>" target="_blank"><%=  truncate(economy.title) %></a></h1> 
+  <p style="font-size:11px;"><%= truncate(economy.description, :length => 140).html_safe %></p>
+  <span class="date"><%= economy.pubDate %></span>
+</div>
+</div>
+<% end %>
+
+</div>
+
+<div style="" id="tagtab" class="tabdiv ui-tabs-panel ui-tabs-hide">
+
+<% @companies.each do |company| %> 
+<div class="tab_inside">
+<div class="content">
+  <h1><a href="<%= company.link %>" target="_blank"><%=  truncate(company.title) %></a></h1> 
+  <p style="font-size:11px;"><%= truncate(company.description, :length => 140).html_safe %></p>
+  <span class="date"><%= company.pubDate %></span>
+  </div>
+</div>
+<% end %>
+
+</div>
+
+
+</div> 
