@@ -406,7 +406,7 @@ background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* Chrome10+,
 		padding:0 0 10px 0;
 	}
 	#content .aside .section {
-		padding-bottom:42px; float:left
+		padding-bottom:42px; float:left; width: 296px;
 	}
 	
 	#content .img-border {

@@ -10,10 +10,15 @@
               <div class="left-bot-corner">
                 <div class="inner">
                   <dl class="list3">
-                    <dt><strong>07/05/2010</strong> Gifts &amp; Novelties</dt>
-                    <dd>Accusantium doemque laudantot aperiam, eaque ipsa quaein...<a href="#">&gt;&gt;</a></dd>
-                    <dt><strong>08/06/2010</strong> Network Marketing</dt>
-                    <dd>Accusantium doemque laudantot aperiam, eaque ipsa quaein...<a href="#">&gt;&gt;</a></dd>
+                    <% events = Event.find(:all, :limit=>2, :order=>"id desc") %>
+                    <% events.each do |event| %> 
+                    <dt><strong><%= event.created_at.strftime("%a %d %b, %Y") %></strong> <%= event.name %></dt>
+                    <% end %>
+                    
+                    <% press_release = Press.find(:all, :limit=>2, :order=>"id desc") %>
+                     <% press_release.each do |press| %> 
+                      <dt><strong><%= event.created_at.strftime("%a %d %b, %Y") %></strong> <%= press.title %></dt>
+                    <% end %>
 
                   </dl>
                   
