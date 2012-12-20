@@ -8,21 +8,26 @@
           <div class="right-top-corner">
             <div class="right-bot-corner">
               <div class="left-bot-corner">
+              
+               
                 <div class="inner">
-                  <dl class="list3">
-                    <% events = Event.find(:all, :limit=>2, :order=>"id desc") %>
-                    <% events.each do |event| %> 
-                    <dt><strong><%= event.created_at.strftime("%a %d %b, %Y") %></strong> <%= event.name %></dt>
-                    <% end %>
-                    
-                    <% press_release = Press.find(:all, :limit=>2, :order=>"id desc") %>
-                     <% press_release.each do |press| %> 
-                      <dt><strong><%= press.created_at.strftime("%a %d %b, %Y") %></strong> <br/><%= press.title %></dt>
-                    <% end %>
+                                              <% events = Event.find(:all, :limit=>2, :order=>"id desc") %>
+                                              <% events.each do |event| %>
+                                              <div class="news_box">
+                                              <div> <a href="<%= events_path %>#<%= event.id %>" class="news_heading"><%= event.name %></a></div>
+                                              <div class="news_date"><%= event.created_at.strftime("%a %d %b, %Y") %> </div>
+                                              </div>
+                                              <% end %>
 
-                  </dl>
-                  
-                </div>
+                                              <% press_release = Press.find(:all, :limit=>2, :order=>"id desc") %>
+                                              <% press_release.each do |press| %>
+                                              <div class="news_box">
+                                              <div> <a href="<%= presses_path %>" class="news_heading"><%= press.title %></a></div>
+                                              <div class="news_date"><%= press.created_at.strftime("%a %d %b, %Y") %> </div>
+                                              </div>
+                                              <% end %>
+                                              <div class="wrapper"></div>
+                                            </div>
               </div>
             </div>
           </div>
@@ -32,3 +37,9 @@
   </div>
   <!-- /.box -->
 </div>
+
+
+
+
+
+             

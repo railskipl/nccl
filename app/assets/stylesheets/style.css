@@ -633,4 +633,11 @@ background: -webkit-linear-gradient(top, #eeeeee 0%,#cccccc 100%); /* Chrome10+,
 .pagination_magArticles {padding:3px;}
 
 
+.news_box{ width:100%; float:left; border-bottom:1px dotted gray; margin:0 0 10px 0; padding:0 0 10px 0}
+
+.news_heading{ color:#0c5da8; text-decoration:none; font-weight:bold}
+
+.news_date{ font-size:11px}
+
+
 
