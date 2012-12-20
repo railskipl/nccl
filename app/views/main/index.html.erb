@@ -12,8 +12,8 @@
   				<ul>
   					<li><a href="#fadeFour"><img src="/assets/nrs.jpg" alt="" /></a><div class="label_text"><p>Nagpur Railway Station</p></div></li>
   					<li><a href="#fadeFour"><img src="/assets/rbi.jpg" alt="" width="709" height="469" /></a><div class="label_text"><p>Reserve Bank of India</p></div></li>
-  					<li><a href="#fadeFour"><img src="/assets/pp.jpg" alt="" width="709" height="469" /></a><div class="label_text"><p>Title 02</p></div></li>
-  					<li><a href="#fadeFour"><img src="/assets/vca.jpg" alt="" width="709" height="469" /></a><div class="label_text"><p>Vidarbha Cricket Association (VCA) Stadium Jamtha, Nagpur.</p></div></li>
+  					<li><a href="#fadeFour"><img src="/assets/dikshabhoomi.jpg" alt="" width="709" height="469" /></a><div class="label_text"><p>Deekshabhoomi</p></div></li>
+  					<li><a href="#fadeFour"><img src="/assets/vca.jpg" alt="" width="709" height="469" /></a><div class="label_text"><p>Vidarbha Cricket Association (VCA) Stadium Jamtha, Nagpur</p></div></li>
   					<li><a href="#fadeFour"><img src="/assets/airport.jpg" alt="" width="709" height="469" /></a><div class="label_text"><p>Dr. Babasaheb Ambedkar International Airport, Nagpur</p></div></li>
 
 
@@ -35,7 +35,7 @@
 
   THE NAGPUR CHAMBER OF COMMERCE LTD was incorporated as a “COMPANY LIMITED BY GUARANTEE” under Indian Companies Act, 1913 on March 8’ 1932. The Chamber’ incorporation has a glorious story behind it. Dr. Rajendra Prasad (First President of independent India) as a part of freedom movement started  organizing businessmen and business organizations. He started setting chambers of commerce in major cities, starting with Mumbai. Patna was second and Nagpur had the privilege to be his next choice. Under his inspiration and guidance the 30 member founder team called “ AD HOC COMMITTEE” was formed in leadership of SHRI JODHRAJ MEHADIA The 30 member ad-hoc committee included prominent personalities like Justice P. P. Deo and Adv. ChhaganlalBharuka. Thus the chamber became the first chamber of commerce in central India. 
 
-                        <div class="alignright"><a href="#" class="button">Read more &raquo;</a></div>
+                        <div class="alignright"><a href="/pages/about-us" class="button">Read more &raquo;</a></div>
                       </div>
                     </div>
                   </div>
@@ -66,7 +66,7 @@
     <% @markets.each do |market| %> 
     <div class="tab_inside">
       <div class="content">
-        <h1><a href="<%= market.link %>"><%=  truncate(market.title) %></a></h1> 
+        <h1><a href="<%= market.link %>" target="_blank"><%=  truncate(market.title) %></a></h1> 
         <p style="font-size:11px;"><%= truncate(market.description, :length => 140).html_safe %></p>
         <span class="date"><%= market.pubDate %></span>
       </div>
@@ -82,7 +82,7 @@
     <% @bankings.each do |banking| %> 
     <div class="tab_inside">
       <div class="content">
-        <h1><a href="<%= banking.link %>"><%=  truncate(banking.title) %></a></h1> 
+        <h1><a href="<%= banking.link %>" target="_blank"><%=  truncate(banking.title) %></a></h1> 
         <p style="font-size:11px;"><%= truncate(banking.description, :length => 140).html_safe %></p>
         <span class="date"><%= banking.pubDate %></span>
       </div>
@@ -95,7 +95,7 @@
    <% @economies.each do |economy| %> 
     <div class="tab_inside">
       <div class="content">
-        <h1><a href="<%= economy.link %>"><%=  truncate(economy.title) %></a></h1> 
+        <h1><a href="<%= economy.link %>" target="_blank"><%=  truncate(economy.title) %></a></h1> 
         <p style="font-size:11px;"><%= truncate(economy.description, :length => 140).html_safe %></p>
         <span class="date"><%= economy.pubDate %></span>
       </div>
@@ -109,7 +109,7 @@
     <% @companies.each do |company| %> 
     <div class="tab_inside">
       <div class="content">
-        <h1><a href="<%= company.link %>"><%=  truncate(company.title) %></a></h1> 
+        <h1><a href="<%= company.link %>" target="_blank"><%=  truncate(company.title) %></a></h1> 
         <p style="font-size:11px;"><%= truncate(company.description, :length => 140).html_safe %></p>
         <span class="date"><%= company.pubDate %></span>
         </div>
