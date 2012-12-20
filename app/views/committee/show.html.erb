@@ -23,7 +23,7 @@
     <td align="left" valign="top"><strong>POST</strong></td>
     <td align="left" valign="top"><strong>PH. No.</strong></td>
   </tr>
-  <% members = Committee.find_all_by_committee_type_id(@committee_type.id, :order=>"id asc") %>
+  <% members = Committee.find_all_by_committee_type_id(@committee_type.id, :order=>"id asc").paginate(:per_page => 6, :page => params[:page]) %>
   <% members.each do |member| %>
   <tr>
     <td align="left" valign="top">1</td>
@@ -41,8 +41,9 @@
     <td align="left" valign="top"><strong><%= member.designation %></strong></td>
     <td align="left" valign="top"><p><%= member.contact_info.html_safe %></td>
   </tr>
+ 
   <% end %>
-  
+    <%= will_paginate members %>
 </table>
 
                     </div>
@@ -53,7 +54,7 @@
             
           </div>
           <div class="aside">
-		  
+		 
 		  
 		  
 		  
