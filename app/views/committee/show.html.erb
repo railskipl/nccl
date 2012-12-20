@@ -12,10 +12,10 @@
 
               <div class="wrapper">
            
-              <h2>OFFICE BEARERS &amp; DIRECTORS</h2>
+              <h2><%= @committee_type.title %></h2>
                  
                     <div class="extra-wrap">
-<table width="100%" border="0" cellspacing="5" cellpadding="5">
+  <table width="100%" border="0" cellspacing="5" cellpadding="5">
   <tr>
     <td align="left" valign="top"><strong>S.No </strong></td>
     <td align="left" valign="top"><strong>Photo</strong></td>
@@ -23,52 +23,18 @@
     <td align="left" valign="top"><strong>POST</strong></td>
     <td align="left" valign="top"><strong>PH. No.</strong></td>
   </tr>
+  <% members = Committee.find_all_by_committee_type_id(@committee_type.id) %>
+  <% members.each do |member| %>
   <tr>
     <td align="left" valign="top">1</td>
     <td align="left" valign="top"><img src="/assets/avatar.jpg" alt="" width="100" height="100" class="avatar" /></td>
-    <td align="left" valign="top"><strong>Shri  Kamlesh P. Shah</strong><br />
-      Shah  Furnitures Pvt. Ltd.<br />
-      Plot  No. 1051, Nandanwan Lay-out,<br />
-      K.D.K.  College Road,  Nagpur-9.</td>
-    <td align="left" valign="top"><strong>President</strong></td>
-    <td align="left" valign="top"><p>(O)  2742036, (R) 2715462<br />
-      M-  9545554326<br />
-      Fax-  0712-2742036, 2750638<strong></strong></p>
-      shahngp@gmail.com</td>
+    <td align="left" valign="top"><strong><%= member.name %></strong><br />
+      <%= member.address.html_safe %>
+    <td align="left" valign="top"><strong><%= member.designation %></strong></td>
+    <td align="left" valign="top"><p><%= member.contact_info.html_safe %></td>
   </tr>
-  <tr>
-    <td align="left" valign="top">2</td>
-    <td align="left" valign="top"><img src="/assets/avatar.jpg" alt="" width="100" height="100" class="avatar" /></td>
-    <td align="left" valign="top"><strong>Shri  Kailash Jogani</strong><br />
-      299/15,  Shantivihar Colony, <br />
-      Opp. Hislop College Lane, Karodpati Gali, <br />
-      Civil  Lines, Nagpur-1</td>
-    <td align="left" valign="top"><strong>I.P.P.</strong></td>
-    <td align="left" valign="top">(O)  2567818 (R) 2286300<br />
-      M-  9822940890<br />
-      kailashjogani@gmail.com</td>
-  </tr>
-  <tr>
-    <td align="left" valign="top">3</td>
-    <td align="left" valign="top"><img src="/assets/avatar.jpg" alt="" width="100" height="100" class="avatar" /></td>
-    <td align="left" valign="top"><strong>Shri  Govind P. Bansal (Agrawal)</strong><br />
-      Gurudarshan  Complex, Flat No. 402, <br />
-      5th  Floor, Chhapru Nagar Chowk, <br />
-      Central  Avenue, Nagpur-8.</td>
-    <td align="left" valign="top"><strong>Sr.  Vice President</strong></td>
-    <td align="left" valign="top"><p>(O)  2762888<br />
-      M-  9326452034</p>
-      govindpbansal@gmail.com</td>
-  </tr>
-  <tr>
-    <td align="left" valign="top">4</td>
-    <td align="left" valign="top"><img src="/assets/avatar.jpg" alt="" width="100" height="100" class="avatar" /></td>
-    <td align="left" valign="top"><strong>Shri  Vishnukumar Pacheriwala</strong><br />
-      Itwari,  Shahid Chowk, Nagpur-2.</td>
-    <td align="left" valign="top"><strong>Vice  president</strong></td>
-    <td align="left" valign="top"><p>(O)  2731917</p>
-      M- 9371115471</td>
-  </tr>
+  <% end %>
+  
 </table>
 
                     </div>

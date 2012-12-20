@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121219050007) do
+ActiveRecord::Schema.define(:version => 20121219120016) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(:version => 20121219050007) do
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
     t.integer  "committee_type_id"
+    t.text     "address"
+    t.text     "contact_info"
   end
 
   create_table "contacts", :force => true do |t|
