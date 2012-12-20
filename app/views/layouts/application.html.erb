@@ -46,6 +46,7 @@
 					  <% commitees.each do |commitee| %>
 						<li><%= link_to commitee.title, committee_path(commitee) %></li>
 					  <% end %>
+					  <li><%= link_to "Past Presidents & Secretaries", {:controller=>"main", :action=>"pps"} %></li>
 					</ul>
 				</li>
 				<li class="yellow">
