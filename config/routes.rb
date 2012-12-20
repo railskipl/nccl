@@ -5,7 +5,8 @@ Nccl::Application.routes.draw do
   devise_for :admins, :path_names => {:sign_in =>"login", :sign_out =>"logout"}
   
   match '/contacts' => "main#contact"
- 
+  
+  match '/past_pres_and_sect' => "main#pps"
   
   resources :main, :only => [:index], :path => 'home-page'
   resources :pages, :only => [:show]

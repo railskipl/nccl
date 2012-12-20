@@ -68,4 +68,9 @@ class MainController < ApplicationController
     	     @title = "contacts"
   	     end
   end
+  
+  def pps
+    
+  end
+  
 end
