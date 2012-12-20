@@ -5,7 +5,7 @@ class Admin::PagesController < ApplicationController
   before_filter :authenticate_admin!, :except => []
   
     def index
-      @pages = Page.order('id desc').paginate(:per_page => 10, :page => params[:page])
+      @pages = Page.order('id desc').paginate(:per_page => 5, :page => params[:page])
       
       respond_to do |format|
           format.html
